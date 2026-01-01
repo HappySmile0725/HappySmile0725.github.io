@@ -1,30 +1,132 @@
 # careers section data
-# if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
-  desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: Prize
+  desc: 
+    detail: 2022년 인천 학생 SW해커톤 챌린지 수상
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
-  job:
-    detail: CTO
-    i18n: company_a_job
+    detail: 2022.11.22
+  hosts:
+    detail: 인천광역시, 인천광역시교육청, 인천테크노파크 공동 주관
+  link:
+    detail: None
   icon: fa-plus-square
-  present: true
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: Certification
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail: UNIST 제 7회 슈퍼컴퓨팅 청소년캠프 전국 30팀 선정 및 캠프 수료
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
-  job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail: 2023.7.17 ~ 2023.7.21
+  hosts:
+    detail: UNIST, KISTI 주관
+  link:
+    detail: https://sites.google.com/view/scyouthcamp
+  icon: fa-plus-square
+
+- name:
+    detail: Join
+  desc:
+    detail: CAT-Security 가입
+  date:
+    detail: 2024.3 ~
+  hosts:
+    detail: CAT-Security
+  link:
+    detail: https://www.catsecurity.net
+  icon: fa-plus-square
+
+- name:
+    detail: Quals
+  desc:
+    detail: HSpace 파트너스 리그 11th (CAT-Security)
+  date:
+    detail: 2024.11.24
+  hosts:
+    detail: HSpace 주최 및 주관
+  link:
+    detail: None
+  icon: fa-plus-square
+
+- name:
+    detail: Penetration Test
+  desc:
+    detail: 가톨릭대학교 침투 테스트
+  date:
+    detail: 2024-2학기
+  hosts:
+    detail: CAT-Security
+  link:
+    detail: None
+  icon: fa-plus-square
+
+- name:
+    detail: Penetration Test
+  desc:
+    detail: 가톨릭대학교 침투 테스트
+  date:
+    detail: 2025-1학기
+  hosts:
+    detail: CAT-Security
+  link:
+    detail: None
+  icon: fa-plus-square
+
+- name:
+    detail: Prize
+  desc:
+    detail: ELECCON 2025 대학부 4th
+  date:
+    detail: 2025.11.19 ~ 2025.11.20
+  hosts:
+    detail: 한국전력공사, 국가정보원 공동 주최
+  link:
+    detail: https://r0llingrolling.tistory.com/29
+  icon: fa-plus-square
+
+- name:
+    detail: Quals
+  desc:
+    detail: 2025 SecureX Challenge 본선 진출(등수 미제공)
+  date:
+    detail: 2025.11.26 ~ 2025.11.28
+  hosts:
+    detail: 교육부
+  link:
+    detail: https://sducoss.ac.kr/ko/community/notice/inno/view/159?p=1
+  icon: fa-plus-square
+
+- name:
+    detail: Quals
+  desc:
+    detail: 2025 ACDC 본선 9th
+  date:
+    detail: 2025.12.1
+  hosts:
+    detail: 과학기술정보통신부 주최 | KISA, Kisia 주관
+  link:
+    detail: https://acdc.ai.kr/notice/1
+  icon: fa-plus-square
+
+- name:
+    detail: Host
+  desc:
+    detail: HolyShield 2025 CTF 주최 및 주관
+  date:
+    detail: 2025.12.20
+  hosts:
+    detail: CAT-Security
+  link:
+    detail: http://k-ctf.org/contests/68f487a49d192c9c7aec114b
+  icon: fa-plus-square
+
+- name:
+    detail: Host
+  desc:
+    detail: HolyShield 2025 Conference 주관
+  date:
+    detail: 2025.12.21
+  hosts:
+    detail: CAT-Security
+  link:
+    detail: http://k-ctf.org/contests/68f487a49d192c9c7aec114b
   icon: fa-plus-square

@@ -15,15 +15,6 @@ module.exports = {
             'static/js/count.js'
         ]
     }, {
-        name: 'i18next page',
-        quotefile: '_includes/index_head.html',
-        prefix: 'i18-',
-        type: 'js',
-        list: [
-            'static/js/i18next.min.js',
-            'static/js/localization.js'
-        ]
-    }, {
         name: 'blog pages',
         quotefile: '_includes/head.html',
         prefix: 'blog-',

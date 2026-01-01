@@ -980,6 +980,18 @@ button.dim:active:before {
   overflow-x: hidden;
 }
 
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .google-map {
   height: 300px;
 }
@@ -1101,6 +1113,40 @@ label.error {
   }
 }
 
+.career-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.career-icon-static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-timeline-icon .career-icon {
+  display: inline-block;
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  font-size: inherit;
+  transform-origin: 50% 50%;
+  transition: transform .2s ease, font-size .2s ease;
+  transform: translate(6px, 5px);
+}
+
+.career-icon-link:hover .career-icon {
+  transform: translate(6px, 4px) rotate(135deg);
+  font-size: calc(1em + 5px);
+}
+
 @media only screen and (min-width: 1170px) {
   .center-orientation .vertical-timeline-icon {
     width: 50px;
@@ -1131,15 +1177,130 @@ label.error {
   h2 {
     font-weight: 400;
     margin-top: 4px;
+    color: #3c3c3c;
   }
   p {
     margin: 1em 0;
+    font-size: 15px;
     line-height: 1.6;
   }
   .vertical-date {
     float: left;
     font-weight: 500;
+    font-size: 19px;
   }
+}
+
+.career-toggle {
+  position: relative;
+}
+
+.career-toggle-wrap {
+  margin: 0 0 10px;
+  position: relative;
+  height: 44px;
+}
+
+.career-toggle-input {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  transform: translateX(-50%);
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.career-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: relative;
+}
+
+.career-toggle-plus {
+  font-size: 32px;
+  color: #3385FF;
+  transition: opacity .2s ease, transform .2s ease;
+  position: absolute;
+}
+
+.career-toggle-line {
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: #3385FF;
+  border-radius: 1px;
+  opacity: 0;
+  transition: width .35s ease, opacity .2s ease;
+  position: absolute;
+}
+
+.career-toggle-bottom {
+  height: 0;
+  margin-top: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height .35s ease, opacity .2s ease, margin-top .35s ease;
+}
+
+.career-toggle-bottom-button {
+  display: block;
+  height: 12px;
+  cursor: pointer;
+}
+
+.career-toggle-line-bottom {
+  display: block;
+  width: 400px;
+  height: 2px;
+  background: #3385FF;
+  border-radius: 1px;
+  opacity: 0;
+  margin: 0 auto;
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+  transition: transform .35s ease, opacity .2s ease;
+}
+
+.career-timeline {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height .6s ease, opacity .35s ease, transform .35s ease;
+}
+
+.career-toggle-input:checked ~ .career-toggle-wrap .career-toggle-plus {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.career-toggle-input:checked ~ .career-toggle-wrap .career-toggle-line {
+  width: 400px;
+  opacity: 1;
+}
+
+.career-toggle-input:checked ~ .career-toggle-bottom .career-toggle-line-bottom {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.career-toggle-input:checked ~ .career-toggle-bottom {
+  height: 2px;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+.career-toggle-input:checked ~ .career-timeline {
+  max-height: 3000px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .vertical-date small {
@@ -1164,7 +1325,7 @@ label.error {
       font-size: 18px;
     }
     p {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
 }
@@ -1195,7 +1356,7 @@ label.error {
       width: 100%;
       left: 122%;
       top: 2px;
-      font-size: 14px;
+      font-size: 19px;
     }
     .vertical-timeline-block:nth-child(even) .vertical-timeline-content {
       &::before {
@@ -2376,10 +2537,13 @@ body {
     color: #aeaeae;
     font-size: 13px;
   }
+  .vertical-timeline-content p {
+    font-size: 15px;
+  }
   h1 {
     margin-top: 10px;
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 700;
   }
   .navy-line {
     width: 60px;
@@ -2636,6 +2800,20 @@ body {
     &:hover {
       background: #3385FF;
     }
+  }
+  .social-icon .fa-github,
+  .social-icon .fa-instagram {
+    position: relative;
+    top: 0.5px;
+  }
+  .social-icon .fa-envelope-o {
+    position: relative;
+    left: -0.5px;
+  }
+  #links .social-icon .fa {
+    position: relative;
+    top: 0.7px;
+    right: 0.2px;
   }
   .img-small {
     height: 88px;

@@ -1,22 +1,15 @@
 # projects section data
-# If you don't have language feature(language.yml is empty), ignore "i18n" items
-# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
-  i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
-  img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use Javascript to get repo's information all my repos have only one request.
+- name: Tapo C200
+  url: https://r0llingrolling.tistory.com/category/Hack/Project
+  img: /static/assets/img/landing/TapoC200.jpg
+  desc: CVE-2021-4045 1-day Research & Finding New Vulnerability in Tapo C200 Project
 
-- name: Python
-  i18n: cpython
-  gh_user: python
-  repo: cpython
-  img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I use another request to get repo's information.
+- name: PwnAutomator
+  url: https://github.com/HappySmile0725/PwnAutomator
+  img: /static/assets/img/landing/ai.png
+  desc: Automating Pwnable with AI MCP or Developing new model Project
 
-- name: Google
-  i18n: google
-  url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
+- name: NAS1Dual
+  url: https://github.com/HappySmile0725/NAS1DUAL
+  img: /static/assets/img/landing/nas1dual.jpg
+  desc: 1-day Research & Finding New Vulnerability in NAS1Dual Project

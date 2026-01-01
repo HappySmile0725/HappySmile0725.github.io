@@ -1,0 +1,341 @@
+:root {
+  --bg: #0f1116;
+  --bg-muted: #141923;
+  --surface: #1b2230;
+  --surface-2: #222b3a;
+  --border: #2b3447;
+  --text: #e7eaf0;
+  --text-muted: #a6b0c3;
+  --text-faint: #7f8aa3;
+  --accent: #4ea1ff;
+  --accent-soft: #7ab8ff;
+  --success: #4cd4a2;
+  --warning: #f0b35b;
+  --danger: #ff6b6b;
+}
+
+body,
+#wrapper,
+#page-wrapper {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.landing-page {
+  background-color: var(--bg);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-soft);
+}
+
+hr {
+  border-color: var(--border);
+}
+
+.gray-bg,
+.gray-section {
+  background-color: var(--bg-muted);
+}
+
+.landing-page #links {
+  background-color: #fff;
+  color: #676a6c;
+}
+
+.white-bg,
+.light-navbar .navbar.navbar-static-top {
+  background-color: var(--surface);
+}
+
+.border-bottom,
+.border-left,
+.border-right,
+.border-left-right {
+  border-color: var(--border) !important;
+}
+
+.navbar-default,
+.navbar-fixed-top,
+.navbar-static-top,
+.navbar-wrapper .navbar,
+.navbar-wrapper .navbar.navbar-scroll {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.navbar-fixed-top {
+  border-bottom-color: var(--border) !important;
+}
+
+.navbar-wrapper .navbar {
+  border-bottom-color: var(--border);
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: var(--border);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-text {
+  color: var(--text);
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: var(--accent);
+  background-color: var(--surface-2);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: var(--accent);
+  background-color: var(--surface-2);
+}
+
+.nav > li.active {
+  background-color: var(--surface-2);
+  border-left-color: var(--accent);
+}
+
+.navbar-toggle {
+  background-color: var(--surface-2);
+}
+
+.navbar-toggle .icon-bar {
+  background-color: var(--text);
+}
+
+.landing-page .navbar-default {
+  background-color: rgba(15, 17, 22, 0.85);
+  border-color: transparent;
+}
+
+.landing-page .navbar-default.navbar-scroll {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.landing-page .navbar-default .nav li a {
+  color: var(--text);
+}
+
+.landing-page .navbar-default .navbar-nav > li > a:hover,
+.landing-page .navbar-default .navbar-nav > li > a:focus {
+  color: var(--accent);
+  background-color: var(--surface-2);
+}
+
+
+.landing-page p.text-color,
+.landing-page section p,
+.author-info,
+.vote-info,
+.text-muted {
+  color: var(--text-muted);
+}
+
+.navy-line {
+  border-bottom-color: var(--accent);
+}
+
+.ibox,
+.ibox-title,
+.ibox-content,
+.contact-box,
+.vote-item,
+.social-feed-box,
+.panel,
+.panel-body,
+.list-group-item,
+.dropdown-menu,
+.modal-content,
+.well {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.ibox-content,
+.ibox-title {
+  border-color: var(--border);
+}
+
+.vote-item {
+  border-top-color: var(--border);
+}
+
+.vote-item:hover {
+  background-color: var(--surface-2);
+}
+
+.article h1 {
+  color: var(--text);
+}
+
+.form-control,
+.search-content {
+  background-color: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.form-control:focus,
+.search-content:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(78, 161, 255, 0.25);
+}
+
+.search-content::placeholder {
+  color: var(--text-faint);
+}
+
+.dropdown-menu > li > a {
+  color: var(--text);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: var(--surface-2);
+  color: var(--accent);
+}
+
+.btn-white,
+.btn-default,
+.btn-link {
+  background-color: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-white:hover,
+.btn-default:hover,
+.btn-link:hover,
+.btn-white:focus,
+.btn-default:focus,
+.btn-link:focus {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.btn-outline {
+  color: var(--text);
+}
+
+.btn-outline.btn-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline.btn-primary:hover {
+  background-color: var(--accent);
+  color: #0f1116;
+}
+
+code {
+  background-color: #1f2532;
+  color: #f0b35b;
+}
+
+pre,
+.highlight {
+  background-color: #1a1f2b;
+  color: var(--text);
+}
+
+#vertical-timeline:before,
+#vertical-timeline.light-timeline:before {
+  background-color: var(--border);
+}
+
+.vertical-timeline-icon {
+  background-color: var(--surface-2);
+  border-color: var(--border);
+  color: var(--accent);
+}
+
+.vertical-timeline-content {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.vertical-timeline-content h2 {
+  color: #e6edf3;
+}
+
+.vertical-timeline-content::before {
+  border-right-color: var(--surface);
+}
+
+.center-orientation .vertical-timeline-content::before {
+  border-left-color: var(--surface);
+}
+
+.center-orientation .vertical-timeline-block:nth-child(even) .vertical-timeline-content::before {
+  border-right-color: var(--surface);
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  border-color: var(--border);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--surface-2);
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: var(--surface-2);
+  color: var(--accent);
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0f1116;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--text);
+}
+
+.slick-dots li button:before {
+  color: var(--text-muted);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--accent);
+}
+
+blockquote {
+  border-left-color: var(--border);
+  color: var(--text-muted);
+}

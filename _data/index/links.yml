@@ -1,18 +1,15 @@
 # links section data
-- last_name: Name 1
+- last_name: DreamHack
   first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+  desc: HappySmile
+  website: https://dreamhack.io/users/12203
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
+- last_name: CAT-Security
+  first_name:
+  desc: Pwnable
+  website: https://www.catsecurity.net
 
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- last_name: Github
+  first_name:
+  desc: HappySmile0725
+  website: https://github.com/HappySmile0725

@@ -1,27 +1,52 @@
-<div class="container" id="i18_career">
+<div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1><span data-i18n="career.my_career">My Career</span></h1>
+            <h1>Careers</h1>
         </div>
     </div>
     <div class="row features-block">
         <div class="col-lg-12">
-            <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-            {% for career in site.data.index.careers %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
-                <div class="vertical-timeline-block">
-                    <div class="vertical-timeline-icon {% if career.present ==  true %} navy-bg-present {% else %} navy-bg {% endif %} wow rotateIn">
-                        <i class="fa {{ career.icon }}"></i>
-                    </div>
-                    <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
-                        <h2><span data-i18n="career.{{ career.name.i18n }}">{{ career.name.detail }}</span></h2>
-                        <p><span data-i18n="career.{{ career.desc.i18n }}">{{ career.desc.detail }} </span></p>
-                        <span class="vertical-date"><span data-i18n="career.{{ career.date.i18n }}"> {{ career.date.detail }} </span>
-                        <br/> <small><span data-i18n="career.{{ career.job.i18n }}">{{ career.job.detail }}</span></small> </span>
+            <div class="career-toggle">
+                <input class="career-toggle-input" type="checkbox" id="career-timeline-toggle">
+                <div class="career-toggle-wrap text-center">
+                    <label class="career-toggle-button" for="career-timeline-toggle" aria-label="Toggle career timeline">
+                        <i class="fa fa-plus-square career-toggle-plus" aria-hidden="true"></i>
+                        <span class="career-toggle-line" aria-hidden="true"></span>
+                        <span class="sr-only">Toggle timeline</span>
+                    </label>
+                </div>
+                <div class="career-timeline">
+                    <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+                    {% for career in site.data.index.careers %}
+                    {% assign loopindex = forloop.index | modulo: 2 %}
+                        <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon {% if career.present ==  true %} navy-bg-present {% else %} navy-bg {% endif %} wow rotateIn">
+                            {% if career.link and career.link.detail and career.link.detail != "None" %}
+                            <a class="career-icon-link" href="{{ career.link.detail }}" target="_blank" rel="noopener">
+                                <i class="fa {{ career.icon }} career-icon"></i>
+                            </a>
+                            {% else %}
+                            <span class="career-icon-static">
+                                <i class="fa {{ career.icon }} career-icon"></i>
+                            </span>
+                            {% endif %}
+                        </div>
+                            <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+                                <h2><strong>{{ career.name.detail }}</strong></h2>
+                                <p>{{ career.desc.detail }}</p>
+                                <span class="vertical-date"><strong>{{ career.date.detail }}</strong>
+                                <br/> <small>{{ career.hosts.detail }}</small> </span>
+                            </div>
+                        </div>
+                    {% endfor %}
                     </div>
                 </div>
-            {% endfor %}
+                <div class="career-toggle-bottom text-center">
+                    <label class="career-toggle-bottom-button" for="career-timeline-toggle" aria-label="Toggle career timeline">
+                        <span class="career-toggle-line-bottom" aria-hidden="true"></span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
