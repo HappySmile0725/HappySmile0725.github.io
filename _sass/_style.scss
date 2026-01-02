@@ -1147,6 +1147,16 @@ label.error {
   font-size: calc(1em + 5px);
 }
 
+@media (max-width: 768px) {
+  .vertical-timeline-icon .career-icon {
+    transform: translate(4px, 4px);
+  }
+
+  .career-icon-link:hover .career-icon {
+    transform: translate(4px, 3px) rotate(135deg);
+  }
+}
+
 @media only screen and (min-width: 1170px) {
   .center-orientation .vertical-timeline-icon {
     width: 50px;
